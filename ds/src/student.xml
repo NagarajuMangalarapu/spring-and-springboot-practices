@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        https://www.springframework.org/schema/context
+        https://www.springframework.org/schema/spring-context.xsd">
+
+    <bean id="emp1" class="BinarySearchTree.Employee">   
+        <!-- collaborators and configuration for this bean go here -->
+       <property name="eId" value="142"/>
+       <property name="eName" value="Nag"/>
+     <!--   <property name="sPhoneNo" value="9484848484"/> -->
+       <property name="eAddress" value="Nandi Roads"/>
+    </bean>
+
+    <bean id="emp2" class="BinarySearchTree.Employee">
+      <!--    collaborators and configuration for this bean go here -->
+      <property name="eId" value="130"/>
+      <property name="eName" value="Arjun"/>
+      <property name="eAddress" value="Vivekananda "/>
+    </bean>
+    <bean id="stud1" class="student.Student">
+      <!--    collaborators and configuration for this bean go here -->
+      <property name="sId" value="130"/>
+      <property name="sName" value="Arjun"/>
+      <property name="sPhoneNo" value="38373836387"/>
+      <property name="sAddress" value="Vivekananda "/>
+    </bean>
+    
+
+ <!--    more bean definitions go here -->
+
+</beans>
+

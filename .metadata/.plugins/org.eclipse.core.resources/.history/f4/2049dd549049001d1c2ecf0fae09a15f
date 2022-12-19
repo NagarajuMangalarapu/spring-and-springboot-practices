@@ -1,0 +1,5 @@
+package com.SpringRest.Coutomer.Entities;
+
+public class Customer {
+
+}

@@ -1,0 +1,6 @@
+package com.springrest.CustomerRepository;
+
+public interface CustomerRep extends JpaRepository<Customer,int>
+{
+
+}

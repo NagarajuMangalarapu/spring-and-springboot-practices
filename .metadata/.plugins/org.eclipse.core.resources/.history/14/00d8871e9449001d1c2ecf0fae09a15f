@@ -1,0 +1,11 @@
+package com.springrest.CustomerMgmt;
+
+public class CustomerServiceImp implements CustomerService {
+
+	@Override
+	public List<Customer> getCustmors() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

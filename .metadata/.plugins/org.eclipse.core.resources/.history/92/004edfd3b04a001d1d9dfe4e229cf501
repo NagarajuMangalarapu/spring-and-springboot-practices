@@ -1,0 +1,5 @@
+package com.springrest.Coutomer.entities;
+
+public class Product {
+
+}

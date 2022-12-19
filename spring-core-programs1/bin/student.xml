@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        https://www.springframework.org/schema/context
+        https://www.springframework.org/schema/spring-context.xsd">
+
+
+     <!--  Load the properties file : sport.properties
+      <context:property-placeholder location="classpath:sport.properties"/-->
+       <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+        <property name="location">
+            <value>classpath:sport.properties</value>
+        </property>
+    </bean>
+    
+      
+      
+    <bean id="myFortuneService" class="springpract.HappyFortuneService">
+    </bean>
+<!--     <bean id="myCoach" class="springpract.BaseBallCoach">
+    <constructor-arg ref = "myFortuneService"/>
+    </bean>
+    
+    <bean id="myCoach" class="springpract.FootBallCoach">
+    <constructor-arg ref = "myFortuneService"/>
+    </bean>
+
+    
+     <bean id="myHockeyCoach" class="springpract.HockeyCoach">
+       <property name="fortuneService" ref="myFortuneService"/>
+       <property name="coachname" value="Udemy"/>
+       <property name="teamname" value="Learners.co"/>
+     </bean>
+    -->
+   
+      <bean id="myHockeyCoach" class="springpract.HockeyCoach">
+       <property name="fortuneService" ref="myFortuneService"/>
+       <property name="coachname" value="${foo.coachname}"/>
+       <property name="teamname" value="${foo.teamname}"/>
+     </bean>
+     
+    
+   <!--  <bean id="myCoach" class="springpract.BaseBallCoach">
+    <constructor-arg ref = "myFortuneService"/>
+    </bean>
+    <bean id="myname" class="springpract.Hello1Class"></bean>
+    <bean id="name" class="springpract.HelloClass">
+     <constructor-arg ref="myname"/>
+    </bean>
+     -->
+    
+   
+    
+    
+
+ <!--    more bean definitions go here -->
+
+</beans>

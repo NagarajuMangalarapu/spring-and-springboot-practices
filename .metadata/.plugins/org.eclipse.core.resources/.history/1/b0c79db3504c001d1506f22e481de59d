@@ -1,0 +1,23 @@
+package springrHibernate.Student;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+public class SpringHibernateStudentApplication {
+
+	public static void main(String[] args) {
+	SessionFactory factory = new Configuration().configure().addAnnotatedClass(Student.class).buildSessionFactory();
+	Session session = factory.openSession();
+	
+	Transaction tx = session.beginTransaction();
+	Student thestudent = new Student("1021","Nagaraju" , "32324242" , "Hyd" , "NRI");
+	//session.beginTransaction();
+	session.persist(thestudent);
+	//session.getTransaction()
+	tx.commit();
+	session.close();
+	
+	}
+
+}

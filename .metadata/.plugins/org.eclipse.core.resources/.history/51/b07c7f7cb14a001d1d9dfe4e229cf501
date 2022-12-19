@@ -1,0 +1,5 @@
+package com.springrest.Customer.entities;
+
+public class Product {
+
+}

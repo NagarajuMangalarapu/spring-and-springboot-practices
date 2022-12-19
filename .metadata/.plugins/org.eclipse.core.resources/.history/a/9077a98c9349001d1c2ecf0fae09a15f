@@ -1,0 +1,11 @@
+package com.springrest.CustomerMgmt;
+
+public interface CustomerService {
+
+	public List<Customer> getCustmors();
+	
+	public Customer getCustomer(int cId);
+	
+	public Customer
+	
+}

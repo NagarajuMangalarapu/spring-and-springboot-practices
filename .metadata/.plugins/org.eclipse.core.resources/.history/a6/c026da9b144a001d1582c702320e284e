@@ -1,0 +1,15 @@
+package com.springrest.ACustomer.a;
+
+import java.util.Optional;
+
+import com.springrest.Coutomer.entities.Customer;
+
+import org.springframework.data.repository.CrudRepository;
+import org.yaml.snakeyaml.events.Event.ID;
+
+
+public interface CustomerRep extends CrudRepository<Customer, Integer>
+{
+	Optional<Integer> findById(ID id);
+
+}

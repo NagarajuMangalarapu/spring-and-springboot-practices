@@ -1,0 +1,31 @@
+package com.spring.demo;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.test.web.servlet.MockMvc;
+
+
+//@SpringBootTest
+@WebMvcTest
+class SpringMvcExample1ApplicationTests {
+
+	@Autowired
+	private MockMvc mock;
+	
+	@Test
+	void contextLoads() {
+	}
+	
+	@Test
+	public void shouldReturnDefaultMessage() throws Exception
+	{
+		this.mock.perform(get("/")).
+		          addDo(print()).andExpect(status().isOk())
+		          .andExpect(content().string(containString("example.html")));
+		
+		
+	}
+	
+
+}

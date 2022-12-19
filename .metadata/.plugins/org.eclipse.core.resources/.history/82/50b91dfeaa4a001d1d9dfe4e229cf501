@@ -1,0 +1,48 @@
+package com.springrest.CustomerMgmt;
+
+import java.util.List;
+
+import com.springrest.Coutomer.entities.Customer;
+import com.springrest.Customer.Repository.CustomerRep;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class CustomerServiceImp implements CustomerService {
+    
+	@Autowired
+	private CustomerRep customerrep;
+	
+	@Override
+	public List<Customer> getCustmors() {
+		// TODO Auto-generated method stub
+		return customerrep.findAll();
+	}
+
+	
+	@Override
+	public Customer getCustomer(int cId) {
+		// TODO Auto-generated method stub
+		return customerrep.getById(cId);
+	
+	}
+	@Override
+	public Customer addCustomer(Customer customer) {
+		customerrep.save(customer);
+		return customer;
+	}
+
+	@Override
+	public Customer updateCustomer(Customer customer) {
+	customerrep.save(customer);
+		return customer ;
+	}
+
+	@Override
+	public void deleteCustomer(int cId) {
+		Customer entity = customerrep.getById(cId);
+		customerrep.delete(entity);
+	}
+
+}
